@@ -6,6 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TaskStatusPipe implements PipeTransform {
   transform(completed: boolean): string {
-    return completed ? '✅ Completed' : '⏳ Pending';
+    return completed ? '✔️ Completed' : '⏳ Pending';
   }
 }
