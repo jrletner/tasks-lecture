@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [TaskStatusPipe, TaskHighlightDirective],
   imports: [
-    CommonModule, FormsModule
+    CommonModule, FormsModule,
   ],
   exports: [FormsModule, TaskStatusPipe, TaskHighlightDirective, CommonModule],
 })
