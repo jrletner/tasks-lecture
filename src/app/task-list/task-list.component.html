@@ -1,6 +1,6 @@
 <div>
     <ul>
-      @for (task of tasks; track task.id; ) {
+      @for (task of tasks; track task.id; let i = $index;) {
         <li [appTaskHighlight]="task.completed">
           ID: {{task.id}} (index {{i}}) - {{task.title}} - {{ task.completed | taskStatus }}
           @if (!task.completed) {
