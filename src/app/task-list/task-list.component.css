@@ -1,0 +1,76 @@
+/* General styles */
+div {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Odd and even row styles */
+.odd-row {
+  background-color: #6fb8f7;
+}
+
+.even-row {
+  background-color: #e6f7ff;
+}
+
+/* Hover effect for list items */
+li:hover {
+  background-color: #d1ecf1;
+  transform: scale(1.02);
+}
+
+/* Button styles */
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.delete {
+  background-color: rgb(243, 124, 124);
+}
+.delete:hover {
+  background-color: rgb(249, 93, 93);
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003f7f;
+}
+
+/* Completed task style */
+li.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+li.completed button {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

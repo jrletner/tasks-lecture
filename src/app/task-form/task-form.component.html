@@ -1,0 +1,17 @@
+<div>
+    <input
+        placeholder="Enter New Task"
+        [(ngModel)]="newTaskTitle"
+    >
+    <button
+        type="button"
+        (click)="addTask()"
+    >
+        Add Task
+    </button>
+    <br>
+    <br>
+
+</div>
+<div>Number of tasks:
+  {{taskCount}}</div>
