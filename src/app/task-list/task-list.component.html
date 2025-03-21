@@ -1,13 +1,14 @@
 <div>
     <ul>
-      @for (task of tasks; track task.id; let i = $index;let o = $odd;let e = $even ) {
-        <li [ngClass]="{'odd-row': o,'even-row': e}">
-          ID: {{task.id}} (index {{i}}) - {{task.title}} - {{task.completed ? 'Completed': 'Pending'}}
+      @for (task of tasks; track task.id; ) {
+        <li [appTaskHighlight]="task.completed">
+          ID: {{task.id}} (index {{i}}) - {{task.title}} - {{ task.completed | taskStatus }}
           @if (!task.completed) {
             <button type="button" (click)="completeTask(task.id)">Complete</button>
           }
           <button class="delete" type="button" (click)="deleteTask(task.id)">Delete</button>
         </li>
+
       }
     </ul>
 </div>

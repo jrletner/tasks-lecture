@@ -1,10 +1,11 @@
 import { Component, Inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TaskService } from '../shared/task.service';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-task-list',
-  imports: [NgClass],
+  imports: [SharedModule],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css',
 })
