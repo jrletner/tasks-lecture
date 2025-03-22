@@ -24,6 +24,12 @@ li {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Completed task style */
+.completed {
+  text-decoration: line-through;
+  color: #6c757d; /* Optional: Dim the text color for completed tasks */
+}
+
 /* Odd and even row styles */
 .odd-row {
   background-color: #6fb8f7;

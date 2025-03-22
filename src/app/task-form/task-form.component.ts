@@ -14,8 +14,14 @@ export class TaskFormComponent {
   // Properties
   newTaskTitle = '';
 
+  // get the signal taskCount from service
   get taskCount() {
     return this.taskService.taskCount();
+  }
+
+  // get the signal taskCountCompleted from service
+  get taskCountCompleted() {
+    return this.taskService.taskCountCompleted();
   }
 
   // Methods

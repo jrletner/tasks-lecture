@@ -2,7 +2,9 @@
     <ul>
       @for (task of tasks; track task.id; let i = $index;let o = $odd;let e = $even ) {
         <li [ngClass]="{'odd-row': o,'even-row': e}">
-          ID: {{task.id}} (index {{i}}) - {{task.title}} - {{task.completed ? 'Completed': 'Pending'}}
+          <span [ngClass]="{'completed': task.completed}">
+          ID: {{task.id}} (index {{i}}) - {{task.title}} - {{task.completed ? 'Completed' : 'Pending'}}
+        </span>
           @if (!task.completed) {
             <button type="button" (click)="completeTask(task.id)">Complete</button>
           }
