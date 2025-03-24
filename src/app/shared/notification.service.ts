@@ -11,6 +11,6 @@ export class NotificationService {
   show(msg: string) {
     this._message.set(msg);
     // Auto-clear after 3 seconds
-    setTimeout(() => this._message.set(null), 3000);
+    setTimeout(() => this._message.set(null), 3500);
   }
 }

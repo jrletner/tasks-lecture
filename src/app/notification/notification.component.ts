@@ -9,5 +9,6 @@ import { NotificationService } from '../shared/notification.service';
 export class NotificationComponent {
   // constructor(private notificationService = NotificationService){}
   private notificationService = inject(NotificationService);
+  
   message = computed(() => this.notificationService.message());
 }
