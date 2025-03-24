@@ -2,7 +2,8 @@
     <ul>
       @for (task of tasks; track task.id; let i = $index;) {
         <li [appTaskHighlight]="task.completed">
-          ID: {{task.id}} (index {{i}}) - {{task.title}} - {{ task.completed | taskStatus }}
+
+          ID: {{task.id}} (index {{i}}) - {{task.title}} - {{ task.completed | taskStatus }} <!-- Display the task title, use taskStatus -->
           @if (!task.completed) {
             <button type="button" (click)="completeTask(task.id)">Complete</button>
           }
