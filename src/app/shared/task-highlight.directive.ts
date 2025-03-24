@@ -19,7 +19,7 @@ export class TaskHighlightDirective implements OnChanges {
   ngOnChanges() {
     if (this.appTaskHighlight) {
       // If the task is marked as completed, highlight it visually
-      this.renderer.setStyle(this.el.nativeElement, 'background-color', 'lightgreen');
+      this.renderer.setStyle(this.el.nativeElement, 'background-color', '#80C080');
     } else {
       // Otherwise, show it with a normal white background
       this.renderer.setStyle(this.el.nativeElement, 'background-color', 'lightblue');
