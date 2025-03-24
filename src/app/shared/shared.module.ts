@@ -5,14 +5,14 @@ import { TaskHighlightDirective } from './task-highlight.directive';
 import { FormsModule } from '@angular/forms';
 import { NotificationComponent } from '../notification/notification.component';
 @NgModule({
-  declarations: [
+  declarations: [ //createing a place for components/pipes etc that don't standalone
     TaskStatusPipe,
     TaskHighlightDirective,
     NotificationComponent,],
-  imports: [
+  imports: [  //bringing in from current angualar
     CommonModule, FormsModule,
   ],
-  exports: [
+  exports: [  //allowing these things to be put into this container/truck and delivered from one place 
     NotificationComponent,
     FormsModule,
     TaskStatusPipe,
