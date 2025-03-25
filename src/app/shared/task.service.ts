@@ -17,6 +17,10 @@ export class TaskService {
 
   // Computed signal for task count
   taskCount = computed(() => this.tasks().length);
+  // Computed signal for completed task count
+  taskCountCompleted = computed(
+    () => this.tasks().filter((task) => task.completed).length
+  );
 
   // method to delete a task
   deleteTask(id: number) {
