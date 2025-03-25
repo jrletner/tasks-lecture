@@ -24,20 +24,7 @@ li {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Completed task style */
-.completed {
-  text-decoration: line-through;
-  color: #6c757d; /* Optional: Dim the text color for completed tasks */
-}
 
-/* Odd and even row styles */
-.odd-row {
-  background-color: #6fb8f7;
-}
-
-.even-row {
-  background-color: #e6f7ff;
-}
 
 /* Hover effect for list items */
 li:hover {
@@ -70,7 +57,7 @@ button:active {
   background-color: #003f7f;
 }
 
-/* Completed task style */
+/* Completed task style
 li.completed {
   text-decoration: line-through;
   color: #6c757d;
@@ -79,4 +66,4 @@ li.completed {
 li.completed button {
   background-color: #6c757d;
   cursor: not-allowed;
-}
+} */

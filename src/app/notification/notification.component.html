@@ -1,0 +1,12 @@
+<!--
+  Use Angular's @if directive to conditionally render the message card.
+
+  The message() signal comes from the NotificationService via a computed property.
+  
+  This block will only render when message() has a non-null value.
+-->
+@if (message()) {
+  <div class="messageCard">
+    {{ message() }} <!-- Display the current notification message -->
+  </div>
+}

@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
 import { TaskService } from '../shared/task.service';
+import { SharedModule } from '../shared/shared.module';
+import { NotificationService } from '../shared/notification.service';
 
 @Component({
   selector: 'app-task-form',
-  imports: [FormsModule],
+  imports: [SharedModule],
   templateUrl: './task-form.component.html',
   styleUrl: './task-form.component.css',
 })
 export class TaskFormComponent {
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService, private notify: NotificationService) {}
 
   // Properties
   newTaskTitle = '';
@@ -30,5 +31,7 @@ export class TaskFormComponent {
       this.taskService.addTask(this.newTaskTitle);
       this.newTaskTitle = '';
     }
-  }
+      this.notify.show('✅ Task added!');
+    }
 }
+
