@@ -26,7 +26,17 @@ input:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
-
+/* Custom styles for matBadge */
+.mat-badge-content {
+  background-color: #8b0000 !important; /* Dark red background */
+  color: #ffffff !important; /* White text */
+  font-weight: bold !important; /* Bold text */
+  font-size: 14px; /* Optional: Adjust font size */
+  border-radius: 50%; /* Ensure the badge remains circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Button styles */
 button {
   padding: 10px 20px;
