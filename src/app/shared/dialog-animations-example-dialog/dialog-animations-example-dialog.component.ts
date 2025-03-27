@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import {
-  MatDialog,
   MatDialogActions,
   MatDialogClose,
   MatDialogContent,
