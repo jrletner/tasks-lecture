@@ -1,11 +1,12 @@
 import { computed, Injectable, signal, WritableSignal } from '@angular/core';
 import { Task } from './task';
+import { NotificationService } from './notification.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-  constructor() {}
+  constructor(private notify: NotificationService) {}
 
   tasks = signal<Task[]>([
     { id: 1, title: 'Task 1', completed: false },
@@ -22,11 +23,16 @@ export class TaskService {
     () => this.tasks().filter((task) => task.completed).length
   );
 
+  // For the dialog box
+  taskToAction = signal<number | null>(null);
+  taskAction = signal<string | null>(null);
+
   // method to delete a task
   deleteTask(id: number) {
     this.tasks.update((currentTasks) =>
       currentTasks.filter((task) => task.id != id)
     );
+    this.notify.show('✌️ Task Deleted!');
   }
 
   // method to complete a task
@@ -39,6 +45,7 @@ export class TaskService {
         return task;
       });
     });
+    this.notify.show('✔️ Task Completed!');
   }
 
   // method for adding a new task

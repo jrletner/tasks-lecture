@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>
+    {{action === "deleteTask" ? "Delete" : "Complete"}} Task
+</h2>
+<mat-dialog-content>
+    Would you like to {{action === "deleteTask" ? "delete" : "complete"}} the task?
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button
+        mat-button
+        mat-dialog-close
+        (click)="handleClose()"
+    >
+        Cancel
+    </button>
+    <button
+        mat-button
+        mat-dialog-close
+        cdkFocusInitial
+        (click)="handleAction(action!)"
+    >
+        {{action === "deleteTask" ? "Delete":"Complete"}}
+    </button>
+</mat-dialog-actions>
