@@ -36,7 +36,7 @@ export class TaskFormComponent {
     if (this.newTaskTitle) {
       this.taskService.addTask(this.newTaskTitle);
       this.newTaskTitle = '';
+      this.notify.show('✅ Task added!');
     }
-    this.notify.show('✅ Task added!');
   }
 }
