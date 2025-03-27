@@ -1,17 +1,9 @@
-import { Component, inject, Inject } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { TaskService } from '../shared/task.service';
 import { SharedModule } from '../shared/shared.module';
 import { NotificationService } from '../shared/notification.service';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  MatDialog,
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-  MatDialogRef,
-  MatDialogTitle,
-} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogAnimationsExampleDialog } from '../shared/dialog-animations-example-dialog/dialog-animations-example-dialog.component';
 
 @Component({
