@@ -47,3 +47,12 @@ button:active {
   background-color: #003f7f;
   transform: scale(0.98);
 }
+
+/* Custom styles for matBadge */
+.mat-badge-content {
+  background-color: #8b0000 !important; /* Dark red background */
+  color: #ffffff !important; /* White text */
+  font-weight: bold !important; /* Bold text */
+  font-size: 12px; /* Optional: Adjust font size */
+  border-radius: 50%; /* Ensure the badge remains circular */
+}
