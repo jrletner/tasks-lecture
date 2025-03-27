@@ -26,8 +26,6 @@ export class DialogAnimationsExampleDialog {
   constructor(private taskService: TaskService) {}
 
   get action() {
-    console.log('Action:', this.taskService.taskAction());
-
     return this.taskService.taskAction();
   }
 
