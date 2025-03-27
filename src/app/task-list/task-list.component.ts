@@ -13,10 +13,7 @@ import { DialogAnimationsExampleDialog } from '../shared/dialog-animations-examp
   styleUrl: './task-list.component.css',
 })
 export class TaskListComponent {
-  constructor(
-    private taskService: TaskService,
-    private notify: NotificationService
-  ) {}
+  constructor(private taskService: TaskService) {}
 
   // method to get tasks
   get tasks() {
